@@ -1,0 +1,31 @@
+name: Generate Metrics GIF
+
+on:
+  # Run manually from the Actions tab
+  workflow_dispatch:
+  # Run on schedule (adjust as needed)
+  schedule:
+    - cron: "0 0 * * 0" # Weekly on Sundays at midnight
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Generate Metrix
+        uses: joanroig/metrix@main
+        with:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: ${{ github.actor }}
+          # You can add more customization parameters here
+
+      - name: Commit and Push Metrix GIF
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add metrix.gif
+          git commit -m "Update GitHub Metrix GIF" || echo "No changes to commit"
+          git push
+        shell: bash
