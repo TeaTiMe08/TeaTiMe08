@@ -1,4 +1,9 @@
 ## Hi there 👋
+I am just here to stay. 
+If anybody reads this in 2100+, <br>
+maybe you might have heared about Java or C++,<br>
+but surely you neved heared 'bout Rust.
+
 [![metrix](metrix.gif)](https://github.com/joanroig/metrix)
 
 <!--
