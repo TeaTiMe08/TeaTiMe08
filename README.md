@@ -1,4 +1,5 @@
 ## Hi there 👋
+[![metrix](metrix.gif)](https://github.com/joanroig/metrix)
 
 <!--
 **TeaTiMe08/TeaTiMe08** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
