@@ -20,6 +20,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
           GITHUB_USERNAME: ${{ github.actor }}
           # You can add more customization parameters here
+          BACKGROUND_COLOR: 'wheat'
+          TEXT_COLOR: 'darkslategrey'
 
       - name: Commit and Push Metrix GIF
         run: |
